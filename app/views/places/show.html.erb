@@ -1,0 +1,5 @@
+<%= @place.title %><br>
+<%= @place.description %><br>
+<% image_tag @place.images do |image| %>
+    <%= image.photo.url(:medium) %>
+<% end %>

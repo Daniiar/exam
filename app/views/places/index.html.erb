@@ -1,2 +1,9 @@
-<h1>Places#index</h1>
-<p>Find me in app/views/places/index.html.erb</p>
+<% @places.each do |place| %>
+  <% image_tag place.images do |image| %>
+        <%= image.photo.url(:medium) %>
+  <% end %>
+  <h5>Title:<%= link_to place.title, place_path(place) %><br></h5>
+  <h5>Description:<%= place.description %></h5>
+  <h5>Category:<%= place.category.title %></h5><br><br>
+<% end %>
+<%= link_to 'add new place', new_place_path %>

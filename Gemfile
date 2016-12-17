@@ -25,3 +25,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem "paperclip", "~> 5.0.0"
+gem 'pry'
+gem 'pry-remote'
+gem 'pry-stack_explorer'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'activeadmin', github: 'activeadmin'

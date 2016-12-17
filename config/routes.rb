@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   root 'guests#index'
 
   get 'images/index'
 
   get 'categories/index'
 
-  get 'places/index'
-  get 'places/new'
+  resources :places
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
